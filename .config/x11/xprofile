@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# Session & startup configs
+setxkbmap -layout br
+setbg.sh &

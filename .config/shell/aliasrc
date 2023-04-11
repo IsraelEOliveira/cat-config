@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# home-git
+[ -d "$HOME_GIT_DIR" ] && alias hit="/usr/bin/git --git-dir=$HOME_GIT_DIR --work-tree=$HOME"
+
+# nvim
+[ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
+
+# xinit
+[ -f "$XINITRC" ] && alias startx="startx $XINITRC"
+
+alias \
+  BASH_COMPLETION_USER_FILE="$XDG_CONFIG_HOME/bash/completion" \
+  HISTFILE="$XDG_STATE_HOME/bash/history"

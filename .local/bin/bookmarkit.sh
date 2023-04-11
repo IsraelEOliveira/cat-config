@@ -1,5 +1,5 @@
 #!/bin/sh
-bookmarks="$HOME/.local/share/sickle/bookmarks"
+bookmarks="${XDG_DATA_HOME:-$HOME/.local/share}/sickle/bookmarks"
 content=$(xclip -o)
 
 mkdir -p $(dirname "$bookmarks")

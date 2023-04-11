@@ -1,0 +1,2 @@
+[[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc" ]] && . "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc" 
+
