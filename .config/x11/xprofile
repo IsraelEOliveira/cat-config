@@ -1,5 +1,11 @@
 #!/bin/sh
 
+autostart="dunst dwmblocks"
+
+for program in $autostart; do
+	pidof -sx "$program" || "$program" &
+done >/dev/null 2>&1
+
 # Session & startup configs
 setxkbmap -layout br
 setbg.sh &

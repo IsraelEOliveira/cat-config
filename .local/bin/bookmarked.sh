@@ -1,2 +1,2 @@
 #!/bin/sh
-xdotool type $(cat "${XDG_DATA_HOME:-$HOME/.local/share}/sickle/bookmarks" | dmenu -i -l 10)
+xdotool type $(cat "${XDG_DATA_HOME:-$HOME/.local/share}/vault/bookmarks" | dmenu -i -l 10)
