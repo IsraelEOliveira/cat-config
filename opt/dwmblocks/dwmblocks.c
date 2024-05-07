@@ -41,6 +41,7 @@ static void	(*write_method)(char const *) = write_root_window;
 
 static char blocks_buffer[LENGTH(blocks)][CMDLENGTH] = {0};
 static char status_buffer[2][STATUSLENGTH];
+static char write_buffer[STATUSLENGTH + 2];
 static char action[] = "\0";
 static int	terminate_absent = 1;
 
@@ -137,7 +138,8 @@ int assemble_status(char * str, char * last) {
 
 void write_status() {
 	if (assemble_status(status_buffer[0], status_buffer[1])) {
-		write_method(status_buffer[0]);
+		sprintf(write_buffer, " %s ", status_buffer[0]);
+		write_method(write_buffer);
 	}
 }
 
